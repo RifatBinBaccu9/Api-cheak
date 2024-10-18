@@ -16,4 +16,11 @@ class ApiController extends Controller
             return response()->json(['users'=>$users], 200);
         }
     }
+
+    public function addUser(Request $req){
+        if($req->isMethod('post')){
+            $data=$req->all();
+            return $data;
+        }
+    }
 }
