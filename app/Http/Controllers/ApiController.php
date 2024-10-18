@@ -20,7 +20,14 @@ class ApiController extends Controller
     public function addUser(Request $req){
         if($req->isMethod('post')){
             $data=$req->all();
-            return $data;
+            // return $data;
+            $user=new User();
+            $user->name=$data['name'];
+            $user->email=$data['email'];
+            $user->password=$data['password'];
+            $user->save();
+            $message='User Succesfully Added';
+            return response()->json(['message'=>$message], 201);
         }
     }
 }
