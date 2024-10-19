@@ -10,7 +10,7 @@ class ApiController extends Controller
 {
     public function showUser($id=null){
         if($id==''){
-            $users= User::get();
+            $users=User::get();
             return response()->json(['users'=>$users], 200);
         }else{
             $users=User::find($id);
