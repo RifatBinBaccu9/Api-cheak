@@ -10,4 +10,4 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/users/{id?}', [ApiController::class, 'showUser']);
 
-Route::post('/addusers', [ApiController::class, 'addUser']);
+// Route::post('/addusers', [ApiController::class, 'addUser']);
